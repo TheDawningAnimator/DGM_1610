@@ -5,7 +5,10 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     // Access modifier, Data type, Name
-    public float speed = 5.0f;
+    public float speed = 30.0f;
+
+    private float turnspeed = 35.9f;
+
 
     public float hInput;
 
@@ -19,10 +22,12 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //gather inpt for controls
         hInput = Input.GetAxis("Horizontal");
         fInput = Input.GetAxis("Vertical");
-
+        //makes player go back and forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * fInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * hInput);
+        //makes player go left and right
+        transform.Rotate(Vector3.up * turnspeed * hInput * Time.deltaTime);
     }
 }
