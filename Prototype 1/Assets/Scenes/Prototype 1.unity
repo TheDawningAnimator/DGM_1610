@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f8a0039f5edd741963d920e17c8dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 20
   hInput: 0
   fInput: 0
 --- !u!54 &1582585116
