@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
         hInput = Input.GetAxis("Horizontal");
         if (transform.position.x < -15)
             transform.position = new Vector3(-15, transform.position.y, transform.position.z);
+        if (transform.position.x > 15)
+            transform.position = new Vector3(15, transform.position.y, transform.position.z);
         transform.Translate(Vector3.right * hInput * Time.deltaTime * speed);
     }
 }
