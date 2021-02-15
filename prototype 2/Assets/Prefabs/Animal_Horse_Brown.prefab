@@ -1053,7 +1053,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469728918131064565}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 11.141396, y: 35.932602, z: 50.810722}
@@ -1837,6 +1837,7 @@ GameObject:
   - component: {fileID: 469728918130824115}
   - component: {fileID: 469728918119544295}
   - component: {fileID: 8685807218824065220}
+  - component: {fileID: 432247906102445453}
   m_Layer: 0
   m_Name: SA_Animal_Horse_Brown
   m_TagString: Untagged
@@ -1963,6 +1964,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBound: 35
   lowerBound: -15
+--- !u!65 &432247906102445453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469728918131108777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.366853, y: 36.631172, z: 43.421764}
+  m_Center: {x: 1.1116785, y: 18.315578, z: 4.3370914}
 --- !u!1 &469728918131111131
 GameObject:
   m_ObjectHideFlags: 0

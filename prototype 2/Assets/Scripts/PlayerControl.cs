@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
 
     public float speed = 20.0f;
 
-    private float xRange = 15;
+    private float xRange = 20;
 
     public GameObject projectilePrefab;
 
