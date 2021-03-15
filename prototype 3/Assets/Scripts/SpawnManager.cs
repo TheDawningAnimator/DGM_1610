@@ -6,21 +6,26 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject obsticalPrefab;
 
-    public float startDelay = 0.2f;
+    public float startDelay = 2.0f;
 
-    public float repeatDelay = 
+    public float repeatRate = 2.0f;
+
+    private PlayerControler PCS;
+
     private Vector3 spawnPos = new Vector3(25, 0, 0);
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating();
-        Instantiate(obsticalPrefab, spawnPos, obsticalPrefab.transform.rotation);
+        InvokeRepeating("spawnObstical", startDelay, repeatRate);
+        PCS = GameObject.Find("player").GetComponent<PlayerControler>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+    void spawnObstical()
+    { if (PCS.isGameOver == false)
+        {
+            Instantiate(obsticalPrefab, spawnPos, obsticalPrefab.transform.rotation);
+        }
+        
     }
-    void spawnObstical();
+ 
 }
