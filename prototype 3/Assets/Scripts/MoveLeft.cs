@@ -19,11 +19,11 @@ public class MoveLeft : MonoBehaviour
     {
         
 
-        if (PCS.isGameOver == false)
+        if (PCS.isGameOver == true)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
-        if (transform.position.x < leftBound && gameObject.CompareTag("Obstical"))
+        if (transform.position.x < leftBound && gameObject.CompareTag("bstical"))
         {
             Destroy(gameObject);
         }

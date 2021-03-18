@@ -21,7 +21,7 @@ public class SpawnManager : MonoBehaviour
         PCS = GameObject.Find("player").GetComponent<PlayerControler>();
     }
     void spawnObstical()
-    { if (PCS.isGameOver == false)
+    { if (PCS.isGameOver == true)
         {
             Instantiate(obsticalPrefab, spawnPos, obsticalPrefab.transform.rotation);
         }
