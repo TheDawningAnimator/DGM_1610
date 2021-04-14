@@ -36,7 +36,7 @@ public class PlayerControler : MonoBehaviour
     void Update()
         
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && isGameOver)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !isGameOver)
         { 
          playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
@@ -63,7 +63,7 @@ public class PlayerControler : MonoBehaviour
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticales.Play();
             dirtParticles.Stop();
-            playerAudio.PlayOneShot(jumpSound, 1.0f);
+            playerAudio.PlayOneShot(crashSound, 1.0f);
         }
     }
 
