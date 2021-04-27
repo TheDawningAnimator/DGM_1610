@@ -19,7 +19,7 @@ public class MoveLeft : MonoBehaviour
     {
         
 
-        if (PCS.isGameOver == false)
+        if (PCS.isGameOver)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }

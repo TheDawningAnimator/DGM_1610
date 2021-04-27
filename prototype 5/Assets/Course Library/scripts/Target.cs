@@ -15,11 +15,6 @@ public class Target : MonoBehaviour
         targetrb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque() ForceMode.Impulse);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     Vector3 RandomForce()
     {
         return Vector3.up * Random.Range(minSpeed, maxSpeed);
