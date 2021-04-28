@@ -22,9 +22,9 @@ public class SpawnManagre : MonoBehaviour
     private void Update()
     {
         //find how many enemies in play
-        enemyCount = FindObjectOfType<Enemy>().Length;
+        enemyCount = FindObjectsOfType<Enemy>().Length;
         //spawn more enemy when no enemy leftm
-        if(enemyCount == 0)
+        if (enemyCount == 0)
         {
             waveNumber++;
             SpawnEnemyWave(waveNumber);
@@ -47,4 +47,5 @@ public class SpawnManagre : MonoBehaviour
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
     }
+}
   
