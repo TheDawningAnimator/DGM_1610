@@ -40,7 +40,7 @@ public class PlayerControler : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("enemy") && hasPowerup)
+        if (collision.gameObject.CompareTag("Enemy") && hasPowerup)
         {
             //gets enemy rigidbody so we can acces properties
             Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
